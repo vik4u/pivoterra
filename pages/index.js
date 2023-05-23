@@ -4,17 +4,50 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 export default function pivoterra() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  function openModalHandler() {
+    setIsModalOpen(true);
+  }
+  function closeModalHandler() {
+    setIsModalOpen(false);
+  }
   return (
     <div className="mainpg">
+      {isModalOpen && (
+        <div className="modal">
+          <button className="closebtn" onClick={closeModalHandler}>
+            X
+          </button>
+          <div className="linksContainer">
+            <Link className="mbNavLink" href="/">
+              ABOUT
+            </Link>
+            <Link className="mbNavLink" href="/units">
+              UNITS
+            </Link>
+            <Link className="mbNavLink" href="/projects">
+              PROJECTS
+            </Link>
+            <Link className="mbNavLink" href="/partners">
+              PARTNERS
+            </Link>
+          </div>
+        </div>
+      )}
       <nav className="navBar">
         <div className="logodiv">
           <img className="logoimg" src="/logo.svg" />
           <p className="pivoterratext">PivoTerra</p>
         </div>
+        <img
+          onClick={openModalHandler}
+          src="/ic_nav_open.svg"
+          className="nav_open_icon"
+        />
         <div className="fouroptions">
           <Link className="aboutbutton" href="/">
             ABOUT

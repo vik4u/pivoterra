@@ -5,9 +5,6 @@ export default function partners() {
   return (
     <div className="partnerspageparent">
       <nav className="navBar">
-        <div>
-          <img src="/ic_nav_open.svg" />
-        </div>
         <div className="logodiv">
           <img className="logoimg" src="/logo.svg" />
           <p className="pivoterratext">PivoTerra</p>
