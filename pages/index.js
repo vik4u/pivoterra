@@ -116,7 +116,7 @@ export default function pivoterra() {
       </section>
       <section className="footer">
         <div className="fparent">
-          <p className="signature"> 2023 PivoTerra Technology Co., Ltd.</p>
+          <p className="signature">@ 2023 PivoTerra Technology Co., Ltd.</p>
           <p className="email">Station Contact: service@pivoterra.co</p>
           <div className="iconsparent">
             <img className="lineimg" src="/line.b3e21d51.svg" />
