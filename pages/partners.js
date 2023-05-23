@@ -14,7 +14,7 @@ export default function partners() {
         </div>
 
         <div className="fouroptions">
-          <Link className="aboutbutton" href="/">
+          <Link className="aboutbutton" href="/about">
             ABOUT
           </Link>
           <Link className="unitsbutton" href="/units">
